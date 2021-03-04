@@ -1,5 +1,6 @@
 .btn {
 	cursor: pointer;
+	border-width: 1px;
 	&:focus,
 	&.focus {
 		outline: none;
@@ -7,24 +8,36 @@
 }
 
 .btn--primary {
-	background-color: var(--color-btn-primary-bg);
 	color: var(--color-btn-primary-text);
+	background-color: var(--color-btn-primary-bg);
 	border-color: var(--color-btn-primary-border);
-	box-shadow: var(--color-btn-primary-shadow);
-	&:hover {
+	box-shadow: var(--color-btn-primary-shadow),
+		var(--color-btn-primary-inset-shadow);
+
+	&:hover,
+	&.hover,
+	[open] > & {
 		background-color: var(--color-btn-primary-hover-bg);
 		border-color: var(--color-btn-primary-hover-border);
 	}
-	&:active {
+
+	&:active,
+	&.selected,
+	&[aria-selected="true"] {
 		background-color: var(--color-btn-primary-selected-bg);
 		box-shadow: var(--color-btn-primary-selected-shadow);
 	}
-	&:disabled {
+
+	&:disabled,
+	&.disabled,
+	&[aria-disabled="true"] {
 		color: var(--color-btn-primary-disabled-text);
 		background-color: var(--color-btn-primary-disabled-bg);
 		border-color: var(--color-btn-primary-disabled-border);
 	}
-	&:focus {
+
+	&:focus,
+	&.focus {
 		background-color: var(--color-btn-primary-focus-bg);
 		border-color: var(--color-btn-primary-focus-border);
 		box-shadow: var(--color-btn-primary-focus-shadow);
