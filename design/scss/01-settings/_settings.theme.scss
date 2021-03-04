@@ -1,3 +1,4 @@
+$btn-primary-light-hue: 212;
 @mixin app-color-light {
 	--color-scale-gray-0: #fafbfc;
 	--color-scale-gray-1: #f6f8fa;
@@ -11,7 +12,7 @@
 	--color-scale-gray-9: #24292e;
 
 	// Buttons
-	--color-btn-primary-hue: 212;
+	--color-btn-primary-hue: #{$btn-primary-light-hue};
 	--color-btn-primary-bg: hsl(var(--color-btn-primary-hue), 56%, 41%);
 	--color-btn-primary-text: var(--color-scale-white);
 	--color-btn-primary-border: rgba(27, 31, 35, 0.15);
@@ -51,7 +52,7 @@
 	--color-scale-gray-9: #0d1117;
 
 	// Buttons
-	--color-btn-primary-hue: 207;
+	--color-btn-primary-hue: calc(#{$btn-primary-light-hue} - 4);
 	--color-btn-primary-bg: hsl(var(--color-btn-primary-hue), 59%, 33%);
 	--color-btn-primary-text: var(--color-scale-white);
 	--color-btn-primary-border: hsl(var(--color-btn-primary-hue), 55%, 40%);
