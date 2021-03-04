@@ -1,0 +1,32 @@
+.btn {
+	cursor: pointer;
+	&:focus,
+	&.focus {
+		outline: none;
+	}
+}
+
+.btn--primary {
+	background-color: var(--color-btn-primary-bg);
+	color: var(--color-btn-primary-text);
+	border-color: var(--color-btn-primary-border);
+	box-shadow: var(--color-btn-primary-shadow);
+	&:hover {
+		background-color: var(--color-btn-primary-hover-bg);
+		border-color: var(--color-btn-primary-hover-border);
+	}
+	&:active {
+		background-color: var(--color-btn-primary-selected-bg);
+		box-shadow: var(--color-btn-primary-selected-shadow);
+	}
+	&:disabled {
+		color: var(--color-btn-primary-disabled-text);
+		background-color: var(--color-btn-primary-disabled-bg);
+		border-color: var(--color-btn-primary-disabled-border);
+	}
+	&:focus {
+		background-color: var(--color-btn-primary-focus-bg);
+		border-color: var(--color-btn-primary-focus-border);
+		box-shadow: var(--color-btn-primary-focus-shadow);
+	}
+}
