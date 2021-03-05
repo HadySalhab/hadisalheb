@@ -2,7 +2,8 @@
 @use 'settings.dark' as dark;
 
 :root {
-	@include dark.app-color-dark();
+	// @include dark.app-color-dark();
+	@include light.app-color-light();
 }
 
 [data-color-mode="dark"] {
