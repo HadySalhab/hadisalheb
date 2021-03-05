@@ -1,0 +1,13 @@
+@use 'settings.light' as light;
+@use 'settings.dark' as dark;
+
+:root {
+	@include dark.app-color-dark();
+}
+
+[data-color-mode="dark"] {
+	@include dark.app-color-dark();
+}
+[data-color-mode="light"] {
+	@include light.app-color-light();
+}
