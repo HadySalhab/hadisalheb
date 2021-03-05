@@ -222,6 +222,20 @@ $component-customization: (
 		warning: rgba($yellow-4, 0.1),
 		warning-inverse: $yellow-4,
 	),
+	border: (
+		primary: $gray-6,
+		secondary: $gray-7,
+		tertiary: $gray-4,
+		overlay: $gray-6,
+		inverse: $white,
+		info: rgba($blue-4, 0.4),
+		danger: rgba($red-4, 0.4),
+		success: rgba($green-3, 0.4),
+		warning: rgba($yellow-4, 0.4),
+	),
+	hr: (
+		border: $gray-6,
+	),
 );
 // LIGHT THEME
 @mixin app-color-dark {
