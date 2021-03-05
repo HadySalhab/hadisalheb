@@ -1,9 +1,11 @@
 // SETTINGS
 @import "01-settings/settings.typography";
 @import "01-settings/settings.theme";
+@import "01-settings/settings.breakpoints";
 
 // TOOLS
 @import "02-tools/mixin.clearfix";
+@import "02-tools/mixin.breakpoints";
 
 // GENERIC
 @import "03-generic/generic.box-sizing";
