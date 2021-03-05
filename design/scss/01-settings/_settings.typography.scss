@@ -1,0 +1,15 @@
+// Line Heights:
+$lh-condensed-ultra: 1 !default;
+$lh-condensed: 1.25 !default;
+$lh-default: 1.5 !default;
+
+// Letter Spacing
+$ls-default: normal;
+
+// Font
+$body-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+	sans-serif, "Apple Color Emoji", "Segoe UI Emoji" !default;
+// The base body size
+$body-font-size: 1rem !default;
+$body-line-height: $lh-default !default;
+$body-letter-spacing: $ls-default;
