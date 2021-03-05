@@ -183,4 +183,4 @@ const kssConfig = Object.assign({}, config, {
 	},
 });
 
-module.exports = [hugoConfig];
+module.exports = [hugoConfig, kssConfig];
