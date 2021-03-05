@@ -85,7 +85,7 @@ $purple-1: #e2c5ff;
 $purple-2: #d2a8ff;
 $purple-3: #bc8cff;
 $purple-4: #a371f7;
-$purple-5: #8957e5;
+$purple-5: hsl(261, 73%, 62%);
 $purple-6: #6e40c9;
 $purple-7: #553098;
 $purple-8: #3c1e70;
@@ -152,20 +152,20 @@ $component-customization: (
 	),
 	btn-primary: (
 		text: #fff,
-		bg: $green-5,
-		border: $green-4,
+		bg: $purple-5,
+		border: $purple-4,
 		shadow: 0 0 transparent,
 		inset-shadow: 0 0 transparent,
-		hover-bg: $green-4,
-		hover-border: $green-3,
-		selected-bg: $green-5,
+		hover-bg: $purple-4,
+		hover-border: $purple-3,
+		selected-bg: $purple-5,
 		selected-shadow: 0 0 transparent,
 		disabled-text: rgba($white, 0.5),
-		disabled-bg: rgba($green-5, 0.6),
+		disabled-bg: rgba($purple-5, 0.6),
 		disabled-border: transparent,
-		focus-bg: $green-5,
-		focus-border: $green-3,
-		focus-shadow: 0 0 0 3px rgba(#2ea44f, 0.4),
+		focus-bg: $purple-5,
+		focus-border: $purple-3,
+		focus-shadow: 0 0 0 3px rgba(hsl(261, 56%, 41%), 0.4),
 		icon: $white,
 		counter-bg: rgba($white, 0.2),
 	),
@@ -189,6 +189,25 @@ $component-customization: (
 		counter-bg: rgba($red-5, 0.1),
 		icon: $red-4,
 		hover-icon: $white,
+	),
+	btn-outline: (
+		text: $blue-3,
+		hover-text: $blue-3,
+		hover-bg: $gray-6,
+		hover-border: $blue-3,
+		hover-shadow: 0 1px 0 $black-fade-10,
+		hover-inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+		hover-counter-bg: rgba($white, 0.2),
+		selected-text: $white,
+		selected-bg: $blue-7,
+		selected-border: $white-fade-10,
+		selected-shadow: 0 0 transparent,
+		disabled-text: rgba($blue-3, 0.5),
+		disabled-bg: $gray-9,
+		disabled-counter-bg: rgba($blue-5, 0.05),
+		focus-border: $blue-3,
+		focus-shadow: 0 0 0 3px rgba($blue-6, 0.4),
+		counter-bg: rgba($blue-5, 0.1),
 	),
 	text: (
 		primary: $gray-1,
