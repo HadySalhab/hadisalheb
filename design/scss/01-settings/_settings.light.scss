@@ -1,0 +1,234 @@
+// Light mode
+
+$black: #1b1f23;
+$white: #fff;
+
+$tbd: $black;
+
+//
+//
+// -------- Grays --------
+$gray-0: #fafbfc;
+$gray-1: #f6f8fa;
+$gray-2: #e1e4e8;
+$gray-3: #d1d5da;
+$gray-4: #959da5;
+$gray-5: #6a737d;
+$gray-6: #586069;
+$gray-7: #444d56;
+$gray-8: #2f363d;
+$gray-9: #24292e; // body font color
+
+// -------- Blue --------
+$blue-0: #f1f8ff;
+$blue-1: #dbedff;
+$blue-2: #c8e1ff;
+$blue-3: #79b8ff;
+$blue-4: #2188ff;
+$blue-5: #0366d6; // Default: Passes AA with #fff
+$blue-6: #005cc5;
+$blue-7: #044289;
+$blue-8: #032f62;
+$blue-9: #05264c; // Passes with 1/2/300 blues
+
+// -------- Green --------
+$green-0: #f0fff4;
+$green-1: #dcffe4;
+$green-2: #bef5cb;
+$green-3: #85e89d;
+$green-4: #34d058;
+$green-5: #28a745; // Default. passes AA Large
+$green-6: #22863a; // Text green, passes AA on #fff
+$green-7: #176f2c;
+$green-8: #165c26;
+$green-9: #144620;
+
+// -------- Yellow --------
+$yellow-0: #fffdef;
+$yellow-1: #fffbdd;
+$yellow-2: #fff5b1;
+$yellow-3: #ffea7f;
+$yellow-4: #ffdf5d;
+$yellow-5: #ffd33d;
+$yellow-6: #f9c513;
+$yellow-7: #dbab09;
+$yellow-8: #b08800;
+$yellow-9: #735c0f;
+
+// -------- Orange --------
+$orange-0: #fff8f2;
+$orange-1: #ffebda;
+$orange-2: #ffd1ac;
+$orange-3: #ffab70;
+$orange-4: #fb8532;
+$orange-5: #f66a0a; // Default. passes AA Large with #fff
+$orange-6: #e36209;
+$orange-7: #d15704;
+$orange-8: #c24e00;
+$orange-9: #a04100;
+
+// -------- Red --------
+$red-0: #ffeef0;
+$red-1: #ffdce0;
+$red-2: #fdaeb7;
+$red-3: #f97583;
+$red-4: #ea4a5a;
+$red-5: #d73a49; // Default. passes AA
+$red-6: #cb2431;
+$red-7: #b31d28;
+$red-8: #9e1c23;
+$red-9: #86181d;
+
+// -------- Purple --------
+$purple-0: #f5f0ff;
+$purple-1: #e6dcfd;
+$purple-2: #d1bcf9;
+$purple-3: #b392f0;
+$purple-4: #8a63d2;
+$purple-5: #6f42c1; // passes AA with #fff
+$purple-6: #5a32a3;
+$purple-7: #4c2889;
+$purple-8: #3a1d6e;
+$purple-9: #29134e;
+
+// -------- Pink --------
+$pink-0: #ffeef8;
+$pink-1: #fedbf0;
+$pink-2: #f9b3dd;
+$pink-3: #f692ce;
+$pink-4: #ec6cb9;
+$pink-5: #ea4aaa;
+$pink-6: #d03592;
+$pink-7: #b93a86;
+$pink-8: #99306f;
+$pink-9: #6d224f;
+
+// -------- Fades --------
+$black-fade-10: rgba($black, 0.1);
+$black-fade-15: rgba($black, 0.15);
+$black-fade-30: rgba($black, 0.3);
+$black-fade-50: rgba($black, 0.5);
+$black-fade-70: rgba($black, 0.7);
+$black-fade-85: rgba($black, 0.85);
+
+$white-fade-10: rgba($white, 0.1);
+$white-fade-15: rgba($white, 0.15);
+$white-fade-30: rgba($white, 0.3);
+$white-fade-50: rgba($white, 0.5);
+$white-fade-70: rgba($white, 0.7);
+$white-fade-85: rgba($white, 0.85);
+
+// -------- Color defaults --------
+$red: $red-5;
+$purple: $purple-5;
+$blue: $blue-5;
+$green: $green-5;
+$yellow: $yellow-5;
+$orange: $orange-5;
+$pink: $pink-5;
+$gray-dark: $gray-9;
+$gray-light: $gray-4;
+$gray: $gray-5;
+
+// -------- Components Color Customization --------
+
+$component-customization: (
+	btn: (
+		text: $gray-9,
+		bg: $gray-0,
+		border: $black-fade-15,
+		shadow: 0 1px 0 rgba($black, 0.04),
+		inset-shadow: inset 0 1px 0 rgba($white, 0.25),
+		// top highlight
+		hover-bg: #f3f4f6,
+		hover-border: $black-fade-15,
+		selected-bg: darken(#f3f4f6, 2%),
+		focus-bg: $gray-0,
+		focus-border: $black-fade-15,
+		focus-shadow: 0 0 0 3px rgba($blue-5, 0.3),
+		shadow-active: inset 0 0.15em 0.3em $black-fade-15,
+		// TODO: Deprecate? Not used in Primer CSS
+		shadow-input-focus: 0 0 0 0.2em rgba($blue, 0.3),
+		// TODO: Deprecate?
+	),
+	btn-primary: (
+		text: $white,
+		bg: #2ea44f,
+		border: $black-fade-15,
+		shadow: 0 1px 0 $black-fade-10,
+		inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+		hover-bg: #2c974b,
+		hover-border: $black-fade-15,
+		selected-bg: darken(#2c974b, 2%),
+		selected-shadow: inset 0 1px 0 rgba($green-9, 0.2),
+		disabled-text: rgba($white, 0.8),
+		disabled-bg: #94d3a2,
+		disabled-border: $black-fade-10,
+		focus-bg: #2ea44f,
+		focus-border: $black-fade-15,
+		focus-shadow: 0 0 0 3px rgba(#2ea44f, 0.4),
+		icon: rgba($white, 0.8),
+		counter-bg: rgba($white, 0.2),
+	),
+	btn-danger: (
+		text: $red-5,
+		hover-text: $white,
+		hover-bg: $red-6,
+		hover-border: $black-fade-15,
+		hover-shadow: 0 1px 0 $black-fade-10,
+		hover-inset-shadow: inset 0 1px 0 rgba($white, 0.03),
+		hover-counter-bg: rgba($white, 0.2),
+		selected-text: $white,
+		selected-bg: darken($red-5, 3%),
+		selected-border: $black-fade-15,
+		selected-shadow: inset 0 1px 0 rgba($red-9, 0.2),
+		disabled-text: rgba($red-5, 0.5),
+		disabled-bg: $gray-0,
+		disabled-counter-bg: rgba($red-5, 0.05),
+		focus-border: $black-fade-15,
+		focus-shadow: 0 0 0 3px rgba($red-6, 0.4),
+		counter-bg: rgba($red-5, 0.1),
+		icon: $red-5,
+		hover-icon: $white,
+	),
+	text: (
+		primary: $gray-9,
+		secondary: $gray-6,
+		tertiary: $gray-5,
+		placeholder: $gray-5,
+		disabled: $gray-4,
+		inverse: $white,
+		link: $blue-5,
+		danger: $red-6,
+		success: $green-6,
+		warning: $yellow-8,
+		white: $white,
+	),
+	bg: (
+		canvas: $white,
+		canvas-mobile: $white,
+		canvas-inverse: $gray-9,
+		canvas-inset: $gray-1,
+		primary: $white,
+		secondary: $gray-0,
+		tertiary: $gray-1,
+		overlay: $white,
+		backdrop: $black-fade-50,
+		info: $blue-0,
+		info-inverse: $blue-5,
+		danger: $red-0,
+		danger-inverse: $red-5,
+		success: $green-1,
+		success-inverse: $green-5,
+		warning: $yellow-2,
+		warning-inverse: $yellow-5,
+	),
+);
+// LIGHT THEME
+@mixin app-color-light {
+	@each $component, $properties-configuration in $component-customization {
+		@each $property, $value in $properties-configuration {
+			--color-#{$component}-#{$property}: #{$value};
+		}
+	}
+}

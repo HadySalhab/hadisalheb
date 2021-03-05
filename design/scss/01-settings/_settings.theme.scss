@@ -1,101 +1,13 @@
-$btn-primary-light-hue: 212;
-@mixin app-color-light {
-	--color-scale-gray-0: #fafbfc;
-	--color-scale-gray-1: #f6f8fa;
-	--color-scale-gray-2: #e1e4e8;
-	--color-scale-gray-3: #d1d5da;
-	--color-scale-gray-4: #959da5;
-	--color-scale-gray-5: #6a737d;
-	--color-scale-gray-6: #586069;
-	--color-scale-gray-7: #444d56;
-	--color-scale-gray-8: #2f363d;
-	--color-scale-gray-9: #24292e;
-
-	// Buttons
-	--color-btn-primary-hue: #{$btn-primary-light-hue};
-	--color-btn-primary-bg: hsl(var(--color-btn-primary-hue), 56%, 41%);
-	--color-btn-primary-text: var(--color-scale-white);
-	--color-btn-primary-border: rgba(27, 31, 35, 0.15);
-	--color-btn-primary-shadow: 0 1px 0 rgba(27, 31, 35, 0.1);
-	--color-btn-primary-hover-bg: hsl(var(--color-btn-primary-hue), 55%, 38%);
-	--color-btn-primary-hover-border: rgba(27, 31, 35, 0.15);
-	--color-btn-primary-selected-bg: hsl(var(--color-btn-primary-hue), 55%, 36%);
-	--color-btn-primary-selected-shadow: inset 0 1px 0 rgba(20, 70, 32, 0.2);
-	--color-btn-primary-disabled-text: rgba(255, 255, 255, 0.8);
-	--color-btn-primary-disabled-bg: hsl(
-		calc(var(--color-btn-primary-hue) - 4),
-		42%,
-		70%
-	);
-	--color-btn-primary-disabled-border: rgba(27, 31, 35, 0.1);
-	--color-btn-primary-focus-bg: hsl(var(--color-btn-primary-hue), 56%, 41%);
-	--color-btn-primary-focus-border: rgba(27, 31, 35, 0.15);
-	--color-btn-primary-focus-shadow: 0 0 0 3px
-		hsla(var(--color-btn-primary-hue), 56%, 41%, 0.4);
-	--color-btn-primary-icon: rgba(255, 255, 255, 0.8);
-	--color-btn-primary-counter-bg: rgba(255, 255, 255, 0.2);
-
-	--color-text-primary: var(--color-scale-gray-9);
-	--color-bg-canvas: var(--color-scale-gray-1);
-}
-
-@mixin app-color-dark {
-	--color-scale-gray-0: #f0f6fc;
-	--color-scale-gray-1: #c9d1d9;
-	--color-scale-gray-2: #b1bac4;
-	--color-scale-gray-3: #8b949e;
-	--color-scale-gray-4: #6e7681;
-	--color-scale-gray-5: #484f58;
-	--color-scale-gray-6: #30363d;
-	--color-scale-gray-7: #21262d;
-	--color-scale-gray-8: #161b22;
-	--color-scale-gray-9: #0d1117;
-
-	// Buttons
-	--color-btn-primary-hue: calc(#{$btn-primary-light-hue} - 4);
-	--color-btn-primary-bg: hsl(var(--color-btn-primary-hue), 59%, 33%);
-	--color-btn-primary-text: var(--color-scale-white);
-	--color-btn-primary-border: hsl(var(--color-btn-primary-hue), 55%, 40%);
-	--color-btn-primary-shadow: 0 0 rgba(0, 0, 0, 0);
-	--color-btn-primary-hover-bg: hsl(var(--color-btn-primary-hue), 55%, 40%);
-	--color-btn-primary-hover-border: hsl(
-		calc(var(--color-btn-primary-hue) - 4),
-		49%,
-		49%
-	);
-	--color-btn-primary-selected-bg: hsl(var(--color-btn-primary-hue), 59%, 33%);
-	--color-btn-primary-selected-shadow: 0 0 rgba(0, 0, 0, 0);
-	--color-btn-primary-disabled-text: rgba(240, 246, 252, 0.5);
-	--color-btn-primary-disabled-bg: hsla(
-		var(--color-btn-primary-hue),
-		59%,
-		33%,
-		0.6
-	);
-	--color-btn-primary-disabled-border: rgba(0, 0, 0, 0);
-	--color-btn-primary-focus-bg: hsl(var(--color-btn-primary-hue), 59%, 33%);
-	--color-btn-primary-focus-border: hsl(
-		calc(var(--color-btn-primary-hue) - 4),
-		49%,
-		49%
-	);
-	--color-btn-primary-focus-shadow: 0 0 0 3px
-		hsla(calc(var(--color-btn-primary-hue) + 4), 56%, 41%, 0.4);
-	--color-btn-primary-icon: #f0f6fc;
-	--color-btn-primary-counter-bg: rgba(240, 246, 252, 0.2);
-
-	--color-text-primary: var(--color-scale-gray-1);
-	--color-bg-canvas: var(--color-scale-gray-9);
-}
+@use 'settings.light' as light;
+@use 'settings.dark' as dark;
 
 :root {
-	--color-scale-white: #ffffff;
-	@include app-color-dark();
+	@include dark.app-color-dark();
 }
 
 [data-color-mode="dark"] {
-	@include app-color-dark();
+	@include dark.app-color-dark();
 }
 [data-color-mode="light"] {
-	@include app-color-light();
+	@include light.app-color-light();
 }
