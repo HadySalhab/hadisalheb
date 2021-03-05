@@ -1,7 +1,7 @@
 // use variables as it will affect the whole page
 body {
 	font-family: $body-font;
-	font-size: $body-font-size;
+	font-size: var(--body-font-size);
 	background-color: var(--color-bg-canvas);
 	color: var(--color-text-primary);
 	letter-spacing: $body-letter-spacing;
