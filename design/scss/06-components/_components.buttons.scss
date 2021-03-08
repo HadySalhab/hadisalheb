@@ -1,3 +1,19 @@
+/*
+Button
+
+Buttons are used for actions, like in forms, while textual hyperlinks are used for destinations, or moving from one page to another.
+
+Markup:
+<button class="btn {{modifier_class}}">Button</button>
+
+:hover - Highlight the button when hovered.
+.btn--primary - Primary Button
+.btn--danger - Danger Button
+
+Weight: 6
+
+Styleguide Components.Buttons
+*/
 .btn {
 	position: relative;
 	display: inline-block;

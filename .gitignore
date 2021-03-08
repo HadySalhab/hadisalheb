@@ -1,6 +1,7 @@
 # dependencies
 **/node_modules
 /.well_known
+ksstemplate
 
 /archive
 

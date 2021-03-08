@@ -170,6 +170,7 @@ const docConfig = Object.assign({}, config, {
 			destination: path.join(__dirname, "design/styleguide/"),
 			css: "../dist/css/styles.css",
 			js: "../dist/js/app.js",
+			builder: path.join(__dirname, "ksstemplate"),
 		}),
 	],
 	output: {
