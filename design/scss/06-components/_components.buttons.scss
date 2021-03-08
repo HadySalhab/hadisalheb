@@ -9,6 +9,7 @@ Markup:
 :hover - Highlight the button when hovered.
 .btn--primary - Primary Button
 .btn--danger - Danger Button
+.btn--large - Large button
 
 Weight: 6
 
@@ -17,10 +18,11 @@ Styleguide Components.Buttons
 .btn {
 	position: relative;
 	display: inline-block;
-	padding: 0.3125em 1em;
-	font-size: var(--body-font-size);
+	padding: var(--space-xxs) var(--space-baseline);
+	font-size: 1rem;
 	font-weight: $font-weight-semibold;
 	line-height: 1.25;
+	vertical-align: middle;
 	white-space: nowrap;
 	vertical-align: middle;
 	cursor: pointer;
@@ -192,4 +194,8 @@ Styleguide Components.Buttons
 		border-color: var(--color-btn-danger-focus-border);
 		box-shadow: var(--color-btn-danger-focus-shadow);
 	}
+}
+
+.btn--large {
+	font-size: 1.3rem;
 }
