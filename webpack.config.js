@@ -10,7 +10,7 @@ const config = {
 	module: {},
 };
 
-const hugoConfig = Object.assign({}, config, {
+const designConfig = Object.assign({}, config, {
 	optimization: {
 		minimizer: [
 			new UglifyJsPlugin({
@@ -97,7 +97,7 @@ const hugoConfig = Object.assign({}, config, {
 });
 
 // KSS CONFIG--------------------
-const kssConfig = Object.assign({}, config, {
+const docConfig = Object.assign({}, config, {
 	optimization: {
 		minimizer: [
 			new UglifyJsPlugin({
@@ -157,21 +157,16 @@ const kssConfig = Object.assign({}, config, {
 		extensions: [".ts", ".scss", ".css", ".js"],
 		modules: [path.resolve(__dirname, "node_modules")],
 	},
-	watchOptions: {
-		aggregateTimeout: 300,
-		poll: 1000,
-	},
 	plugins: [
 		new CleanWebpackPlugin(["js", "css"], {
 			root: path.join(__dirname, "design/dist/"),
 			beforeEmit: true,
-			watch: true,
 		}),
 		new MiniCssExtractPlugin({
 			filename: "css/styles.css",
 		}),
 		new KssWebpackPlugin({
-			source: path.join(__dirname, "design/scss/styles.scss"),
+			source: path.join(__dirname, "design/scss"),
 			destination: path.join(__dirname, "design/styleguide/"),
 			css: "../dist/css/styles.css",
 			js: "../dist/js/app.js",
@@ -183,4 +178,4 @@ const kssConfig = Object.assign({}, config, {
 	},
 });
 
-module.exports = [hugoConfig];
+module.exports = [designConfig, docConfig];
