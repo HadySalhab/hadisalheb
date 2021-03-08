@@ -2,6 +2,7 @@
 @import "01-settings/settings.typography";
 @import "01-settings/settings.theme";
 @import "01-settings/settings.layouts";
+@import "01-settings/settings.spacing";
 
 // TOOLS
 @import "02-tools/mixin.clearfix";
@@ -22,3 +23,4 @@
 
 // COMPONENTS
 @import "06-components/components.buttons";
+@import "06-components/components.profile";

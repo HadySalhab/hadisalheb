@@ -2,6 +2,7 @@ a {
 	color: var(--color-text-link);
 	text-decoration: none;
 	&:hover {
+		cursor: pointer;
 		text-decoration: underline;
 	}
 }
