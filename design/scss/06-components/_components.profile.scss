@@ -22,10 +22,9 @@ Styleguide Components.Profile
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 17.5em;
+	max-width: $sidenav-width;
 	margin: 0 auto;
 	padding: var(--space-md);
-	// background-color: #f6f6f6;
 	&__image {
 		display: flex;
 		align-items: center;
