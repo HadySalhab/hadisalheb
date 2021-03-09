@@ -254,6 +254,15 @@ $component-customization: (
 	hr: (
 		border: lighten($gray-2, 3%),
 	),
+	icon: (
+		primary: $gray-9,
+		secondary: $gray-6,
+		tertiary: $gray-4,
+		info: $blue-5,
+		danger: $red-5,
+		success: $green-6,
+		warning: $yellow-8,
+	),
 );
 // LIGHT THEME
 @mixin app-color-light {

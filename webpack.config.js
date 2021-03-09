@@ -179,4 +179,4 @@ const docConfig = Object.assign({}, config, {
 	},
 });
 
-module.exports = [designConfig, docConfig];
+module.exports = [docConfig];
