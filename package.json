@@ -51,9 +51,7 @@
 		"webpack-cli": "^3.3.12",
 		"webpack-dev-server": "^3.11.2"
 	},
-	"dependencies": {
-		"@primer/css": "^15.2.0"
-	},
+	"dependencies": {},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions"
