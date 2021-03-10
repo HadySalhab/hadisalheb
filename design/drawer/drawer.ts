@@ -23,6 +23,8 @@ export default class Drawer {
 		});
 		if (this.windowWidth > 1012) {
 			this.removeDrawerModal();
+		} else {
+			this.addDrawerModal();
 		}
 
 		this.registerListeners();
@@ -40,7 +42,7 @@ export default class Drawer {
 	}
 	private addDrawerModal() {
 		this.drawer.classList.add("drawer--modal");
-		this.drawerToggler.style.display = "inline-block";
+		this.drawerToggler.style.display = "flex";
 	}
 	private registerListeners() {
 		//listen for window resize event

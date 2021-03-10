@@ -3,8 +3,8 @@
 
 $sidenav-width: 16em;
 :root {
-	@include dark.app-color-dark();
-	// @include light.app-color-light();
+	// @include dark.app-color-dark();
+	@include light.app-color-light();
 }
 
 [data-color-mode="dark"] {

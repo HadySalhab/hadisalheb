@@ -15,9 +15,19 @@ Markup:
   </aside>
   <div class="drawer__scrim"></div>
   <div class="app__content">
-		<header></header>
+		<header class="top-bar">
+			<div class="top-bar__row">
+				<section class="top-bar__section">
+					<button class="top-bar__toggler" id="drawer-toggler">
+				   	<span></span>
+    				<span></span>
+    				<span></span>
+					</button>
+					<span class="top-bar__title">Hadi Salheb</span>
+				</section>
+			</div>
+		</header>
 		<main>
-		<button class="btn" id="drawer-toggler">Toggle</button>
 		</main>
 	</div>
 	</div>
@@ -35,6 +45,65 @@ Styleguide Layout.NavigationBar.
 	position: relative;
 	&__content {
 		position: relative;
+		flex-grow: 1;
+	}
+}
+.top-bar {
+	background-color: var(--color-header-bg);
+	color: var(--color-header-text);
+	position: absolute;
+	width: 100%;
+	&__row {
+		display: flex;
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		height: 64px;
+	}
+	&__section {
+		display: block;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		padding: 0 1em;
+	}
+	&__title {
+		font-family: Roboto, sans-serif;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-size: var(--text-lg);
+		line-height: 2rem;
+		font-weight: 500;
+		letter-spacing: 0.0125em;
+		text-decoration: inherit;
+		text-transform: inherit;
+		padding-left: 20px;
+		padding-right: 0;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&__toggler {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		height: 22px;
+		justify-content: space-between;
+		&:focus {
+			outline: none;
+		}
+		& span {
+			background-color: var(--color-header-text);
+			width: 35px;
+			height: 3px;
+			display: block;
+			transition: all 0.4s ease;
+		}
 	}
 }
 
