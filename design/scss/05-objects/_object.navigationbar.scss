@@ -7,7 +7,7 @@ Top Bar Drawer for mobile and tablet, and sidebar for desktop and widescreen.
 Markup:
 <body>
 <div class="app">
-  <aside class="app__aside drawer drawer--modal">
+  <aside class="app__aside drawer">
     <div class="drawer__content">
       <nav>
       </nav>
@@ -61,30 +61,30 @@ Styleguide Layout.NavigationBar.
 		right: auto;
 		display: none;
 		z-index: 100;
-	}
-	&--opened {
-		display: flex;
-	}
-	&--opened + &__scrim {
-		display: block;
-	}
-	&--animate {
-		transform: translateX(-100%);
-	}
-	&--animate + &__scrim {
-		opacity: 0;
-	}
-	&--opening {
-		transform: translateX(0);
-	}
-	&--opening + &__scrim {
-		opacity: 1;
-	}
-	&--closing {
-		transform: translateX(-100%);
-	}
-	&--closing + &__scrim {
-		opacity: 0;
+		&.drawer--opened {
+			display: flex;
+		}
+		&.drawer--opened + .drawer__scrim {
+			display: block;
+		}
+		&.drawer--animate {
+			transform: translateX(-100%);
+		}
+		&.drawer--animate + .drawer__scrim {
+			opacity: 0;
+		}
+		&.drawer--opening {
+			transform: translateX(0);
+		}
+		&.drawer--opening + .drawer__scrim {
+			opacity: 1;
+		}
+		&.drawer--closing {
+			transform: translateX(-100%);
+		}
+		&.drawer--closing + .drawer__scrim {
+			opacity: 0;
+		}
 	}
 	&__scrim {
 		background-color: rgba(0, 0, 0, 0.32);

@@ -9,6 +9,7 @@ export default class Drawer {
 	drawerToggler: HTMLElement;
 	drawer: HTMLElement;
 	scrim: HTMLElement;
+	windowWidth: number = window.innerWidth;
 
 	constructor() {
 		this.drawerToggler = document.querySelector("#drawer-toggler");
@@ -20,6 +21,10 @@ export default class Drawer {
 			isAnimating: false,
 			isOpening: false,
 		});
+		if (this.windowWidth > 1012) {
+			this.removeDrawerModal();
+		}
+
 		this.registerListeners();
 	}
 
@@ -29,7 +34,24 @@ export default class Drawer {
 			...newState,
 		};
 	}
+	private removeDrawerModal() {
+		this.drawer.classList.remove("drawer--modal");
+		this.drawerToggler.style.display = "none";
+	}
+	private addDrawerModal() {
+		this.drawer.classList.add("drawer--modal");
+		this.drawerToggler.style.display = "inline-block";
+	}
 	private registerListeners() {
+		//listen for window resize event
+		window.addEventListener("resize", (event) => {
+			const newWidth = window.innerWidth;
+			if (newWidth > 1012) {
+				this.removeDrawerModal();
+			} else {
+				this.addDrawerModal();
+			}
+		});
 		this.scrim.addEventListener("click", () => {
 			this.closeDrawer();
 		});
