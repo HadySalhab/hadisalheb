@@ -1,0 +1,171 @@
+/*
+Navigation Bar
+
+Navigation Bar hosts navigation menu.
+Top Bar Drawer for mobile and tablet, and sidebar for desktop and widescreen.
+
+Markup:
+<body>
+<div class="app">
+  <aside class="app__aside drawer">
+    <div class="drawer__content">
+      <nav>
+      </nav>
+    </div>
+  </aside>
+  <div class="drawer__scrim"></div>
+  <div class="app__content">
+		<header class="top-bar">
+			<div class="top-bar__row">
+				<section class="top-bar__section">
+					<button class="top-bar__toggler" id="drawer-toggler">
+				   	<span></span>
+    				<span></span>
+    				<span></span>
+					</button>
+					<span class="top-bar__title">Hadi Salheb</span>
+				</section>
+			</div>
+		</header>
+		<main>
+		</main>
+	</div>
+	</div>
+</body>
+</html>
+
+Weight: 5
+
+Styleguide Layout.NavigationBar.
+*/
+.app {
+	display: flex;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+	&__content {
+		position: relative;
+		flex-grow: 1;
+	}
+}
+.top-bar {
+	background-color: var(--color-header-bg);
+	color: var(--color-header-text);
+	position: absolute;
+	width: 100%;
+	&__row {
+		display: flex;
+		position: relative;
+		box-sizing: border-box;
+		width: 100%;
+		height: 64px;
+	}
+	&__section {
+		display: block;
+		flex-grow: 1;
+		display: flex;
+		align-items: center;
+		justify-content: start;
+		padding: 0 1em;
+	}
+	&__title {
+		font-family: Roboto, sans-serif;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-size: var(--text-lg);
+		line-height: 2rem;
+		font-weight: 500;
+		letter-spacing: 0.0125em;
+		text-decoration: inherit;
+		text-transform: inherit;
+		padding-left: 20px;
+		padding-right: 0;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+	&__toggler {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		height: 22px;
+		justify-content: space-between;
+		&:focus {
+			outline: none;
+		}
+		& span {
+			background-color: var(--color-header-text);
+			width: 35px;
+			height: 3px;
+			display: block;
+			transition: all 0.4s ease;
+		}
+	}
+}
+
+.drawer {
+	background-color: var(--color-bg-canvas-inverse);
+	width: $sidenav-width;
+	min-height: 100%;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: var(--color-border-overlay);
+	flex-shrink: 0;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	display: flex;
+	flex-direction: column;
+
+	&--modal {
+		box-shadow: 0 8px 10px -5px rgb(0 0 0 / 20%),
+			0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%);
+		position: absolute;
+		left: 0;
+		right: auto;
+		display: none;
+		z-index: 100;
+		&.drawer--opened {
+			display: flex;
+		}
+		&.drawer--opened + .drawer__scrim {
+			display: block;
+		}
+		&.drawer--animate {
+			transform: translateX(-100%);
+		}
+		&.drawer--animate + .drawer__scrim {
+			opacity: 0;
+		}
+		&.drawer--opening {
+			transform: translateX(0);
+		}
+		&.drawer--opening + .drawer__scrim {
+			opacity: 1;
+		}
+		&.drawer--closing {
+			transform: translateX(-100%);
+		}
+		&.drawer--closing + .drawer__scrim {
+			opacity: 0;
+		}
+	}
+	&__scrim {
+		background-color: rgba(0, 0, 0, 0.32);
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		transition-duration: 250ms;
+		transition-property: opacity;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}
