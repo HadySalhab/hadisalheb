@@ -1,10 +1,10 @@
 @use 'settings.light' as light;
 @use 'settings.dark' as dark;
 
-$sidenav-width: 17.5em;
+$sidenav-width: 16em;
 :root {
-	@include dark.app-color-dark();
-	// @include light.app-color-light();
+	// @include dark.app-color-dark();
+	@include light.app-color-light();
 }
 
 [data-color-mode="dark"] {

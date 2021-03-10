@@ -1,0 +1,102 @@
+/*
+Navigation Bar
+
+Navigation Bar hosts navigation menu.
+Top Bar Drawer for mobile and tablet, and sidebar for desktop and widescreen.
+
+Markup:
+<body>
+<div class="app">
+  <aside class="app__aside drawer drawer--modal">
+    <div class="drawer__content">
+      <nav>
+      </nav>
+    </div>
+  </aside>
+  <div class="drawer__scrim"></div>
+  <div class="app__content">
+		<header></header>
+		<main>
+		<button class="btn" id="drawer-toggler">Toggle</button>
+		</main>
+	</div>
+	</div>
+</body>
+</html>
+
+Weight: 5
+
+Styleguide Layout.NavigationBar.
+*/
+.app {
+	display: flex;
+	min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+	&__content {
+		position: relative;
+	}
+}
+
+.drawer {
+	background-color: var(--color-bg-canvas-inverse);
+	width: $sidenav-width;
+	min-height: 100%;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: var(--color-border-overlay);
+	flex-shrink: 0;
+	overflow: hidden;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 250ms;
+	display: flex;
+	flex-direction: column;
+
+	&--modal {
+		box-shadow: 0 8px 10px -5px rgb(0 0 0 / 20%),
+			0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%);
+		position: absolute;
+		left: 0;
+		right: auto;
+		display: none;
+		z-index: 100;
+	}
+	&--opened {
+		display: flex;
+	}
+	&--opened + &__scrim {
+		display: block;
+	}
+	&--animate {
+		transform: translateX(-100%);
+	}
+	&--animate + &__scrim {
+		opacity: 0;
+	}
+	&--opening {
+		transform: translateX(0);
+	}
+	&--opening + &__scrim {
+		opacity: 1;
+	}
+	&--closing {
+		transform: translateX(-100%);
+	}
+	&--closing + &__scrim {
+		opacity: 0;
+	}
+	&__scrim {
+		background-color: rgba(0, 0, 0, 0.32);
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		transition-duration: 250ms;
+		transition-property: opacity;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+}

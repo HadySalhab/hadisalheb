@@ -264,6 +264,11 @@ $component-customization: (
 		success: $green-2,
 		warning: $yellow-2,
 	),
+	header: (
+		text: $white-fade-70,
+		bg: $gray-8,
+		logo: $gray-0,
+	),
 );
 // LIGHT THEME
 @mixin app-color-dark {
